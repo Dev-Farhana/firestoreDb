@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe </title>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 style=" text-align: center;font-size: 50px;"> Cloud Cafe </h1>
+    <div class="content">
+        <form id="add-cafe-form"> 
+            <input type="text" name="title" placeholder="cafe Title">
+            <input type="text" name="des" placeholder="Cafe Descript" >  
+            <button id="add"> Add Cafe</button>  
+        </form>
+        <ul id="cafe-list"></ul>
+    </div>
+
+    <script>
+     const firebaseConfig = {
+          apiKey,
+          databaseURL, 
+          projectId,
+          storageBucket 
+        };
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        db.settings({timestampsInSnapshots: true});
+    </script>
+    <script src="app.js"></script>
+    
+
+</body>
+</html>
